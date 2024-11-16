@@ -23,7 +23,7 @@ jobs:
    - name: Run Bandit Scan
      #safe report in json format
      run: bandit -ll -ii -r . -f json -o bandit-report.json
-   
+
    - name: Upload Artifact
      uses: actions/upload-artifact@v3
      #execute this step no matter of previous status
