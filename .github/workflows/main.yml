@@ -66,6 +66,8 @@ jobs:
        command: quickview,cves
        only-severities: critical,high
        sarif-file: scout-report.sarif
+       #exit code by default is true which means 0, add true to produce non success exit code when vulns are found
+       exit-code: true
 
    - name: Upload Artifact
      uses: actions/upload-artifact@v3
